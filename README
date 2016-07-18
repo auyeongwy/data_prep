@@ -1,0 +1,26 @@
+A file stores time durations in the following format where every line is a duplicated again:
+
+0:01:56
+0:01:56
+0:21:46
+0:21:46
+0:21:53
+0:21:53
+0:11:48
+0:11:48
+0:21:47
+0:21:47
+0:07:55
+0:07:55
+
+This application parses the file, removes duplicates, change time to a numerical value, e.g. 0:01:50 = 1.833. Then collects the results into a separate target file where the results are tallied up as follows:
+
+Less than 3 minutes: 
+3-6 minutes:
+6-9 minutes:
+.
+.
+.
+More than 21 minutes:
+
+To see how this application works, an example data file 0715.csv is included. To run, just execute "python data_prep.py 0715.csv".
